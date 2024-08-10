@@ -3,582 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PREVIEW010101</title>
-    <h1>KENZOBASAR.GITHUB.IO</h1>
-    <p>      Minecraft for free    </p>
-    <button class="image-button" onclick="displayAbout()">About</button>
-    <button class="image-button" onclick="displayHome()">Home</button>
-    <p> </p>
-    <p>====================================================================================================</p>
+    <title>Tapu Koko</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        #fileInput {
-            margin-bottom: 20px;
-        }
-        #displayArea {
-            margin-top: 20px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
+/* General Button Styles */
+/* Search Container */
+h1 {
+    font-family: 'Roboto', sans-serif; /* Custom Font */
+    font-weight: 700; /* Bold weight */
+    font-size: 2em; /* Adjust size as needed */
+    color: #333; /* Adjust color as needed */
+    margin: 20px 0; /* Adjust margin as needed */
+}
+
+/* Style for <p> */
+p {
+    font-family: 'Roboto', sans-serif; /* Custom Font */
+    font-weight: 400; /* Normal weight */
+    font-size: 1em; /* Adjust size as needed */
+    color: #666; /* Adjust color as needed */
+    line-height: 1.6; /* Adjust line height for readability */
+    margin: 10px 0; /* Adjust margin as needed */
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Search Input */
+.search-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+/* Search Button */
+.search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Primary Button Styles */
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-primary:active {
+    background-color: #004085;
+    transform: scale(0.98);
+}
+
+/* Secondary Button Styles */
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.btn-secondary:active {
+    background-color: #4e555b;
+    transform: scale(0.98);
+}
+/* Button Hover State */
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+/* Button Active State */
+.search-button:active {
+    background-color: #004085;
+    transform: scale(0.98);
+}
     </style>
 </head>
 <body>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <button class="image-button" onclick="displayAlert()">Download</button>
-    <script>
-        function displayAlert() {
-        window.open("https://github.com/KENZOBASAR/XPCRAFT-Windows-XP-/archive/refs/heads/main.zip", "_blank");
-        }
-        function displayAbout() {
-        alert('ABOUT.ERROR.MAIN.LOG.HTML.NULL101010')
-        }
-        function displayHome() {
-        alert('HOME.ERROR.MAIN.LOG.HTML.NULL101010')
-        }
-    
-    </script>
+    <h1>Tapu Koko</h1>
+    <button class="btn" onclick="home.html">Home</button>
+    <button class="btn" onclick="about.html">About</button>
+    <button class="btn" onclick="signin.html">Sign in</button>
+    <input type="search" class="search-input" placeholder="Search...">
+    <p>What is this site?</p>
+    <details>
+      <summary>More information</summary>
+      <p>Tapu Koko was built by Kenzo Basar.</p>
+      <p>in 10/08/2024</p>
+    </details> 
+    <img src="1.gif" alt="Tapu Koko width="600" height="400">
 </body>
 </html>
