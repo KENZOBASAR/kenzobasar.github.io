@@ -3,125 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tapu Koko</title>
+    <title>Error-OS Project</title>
     <style>
-/* General Button Styles */
-/* Search Container */
-h1 {
-    font-family: 'Roboto', sans-serif; /* Custom Font */
-    font-weight: 700; /* Bold weight */
-    font-size: 2em; /* Adjust size as needed */
-    color: #333; /* Adjust color as needed */
-    margin: 20px 0; /* Adjust margin as needed */
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
-/* Style for <p> */
-p {
-    font-family: 'Roboto', sans-serif; /* Custom Font */
-    font-weight: 400; /* Normal weight */
-    font-size: 1em; /* Adjust size as needed */
-    color: #666; /* Adjust color as needed */
-    line-height: 1.6; /* Adjust line height for readability */
-    margin: 10px 0; /* Adjust margin as needed */
-}
-.search-container {
-    display: flex;
-    align-items: center;
-    max-width: 400px;
-    margin: 20px auto;
-    border-radius: 5px;
-    overflow: hidden;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Search Input */
-.search-input {
-    flex: 1;
+header {
+    background: #6699CC;
+    color: #fff;
+    text-align: center;
     padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-right: none;
-    border-radius: 5px 0 0 5px;
-    outline: none;
+    width: 100%;
 }
 
-/* Search Button */
-.search-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+darkmode {
+    padding: 20px;
+    color: #fff; /* White text color for better contrast */
+    background: #000; /* Black background for sections */
 }
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
 .btn {
     display: inline-block;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
     padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-/* Primary Button Styles */
-.btn-primary {
-    background-color: #007bff;
-    color: white;
+.btn:hover {
+    background: #0056b3;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
+footer {
+    background: #00308F;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
-.btn-primary:active {
-    background-color: #004085;
-    transform: scale(0.98);
-}
-
-/* Secondary Button Styles */
-.btn-secondary {
-    background-color: #6c757d;
-    color: white;
-}
-
-.btn-secondary:hover {
-    background-color: #5a6268;
-}
-
-.btn-secondary:active {
-    background-color: #4e555b;
-    transform: scale(0.98);
-}
-/* Button Hover State */
-.search-button:hover {
-    background-color: #0056b3;
-}
-
-/* Button Active State */
-.search-button:active {
-    background-color: #004085;
-    transform: scale(0.98);
-}
     </style>
 </head>
 <body>
-    <h1>Tapu Koko</h1>
-    <button class="btn" onclick="home.html">Home</button>
-    <button class="btn" onclick="about.html">About</button>
-    <button class="btn" onclick="signin.html">Sign in</button>
-    <input type="search" class="search-input" placeholder="Search...">
-    <p>What is this site?</p>
-    <details>
-      <summary>More information</summary>
-      <p>Tapu Koko was built by Kenzo Basar.</p>
-      <p>in 10/08/2024</p>
-    </details> 
-    <img src="1.gif" alt="Tapu Koko width="600" height="400">
+    <header>
+        <h1>Welcome to Error-OS</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Error-OS</h2>
+        <p>Error-OS is a open source operating system project designed to showcase the capabilities of 16 bit assembly programming.</p>
+    </section>
+    
+    <section id="features">
+        <h2>Features</h2>
+        <ul>
+            <li>Exit command to halt the system</li>
+            <li>Command line operating system</li>
+            <li>Highly customisable</li>
+        </ul>
+    </section>
+    
+    <section id="download">
+        <h2>Download</h2>
+        <p>Get the latest version of Error-OS from our GitHub repository:</p>
+        <a href="https://github.com/KENZOBASAR/Error-OS" target="_blank" class=".btn">Download Error-OS</a>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you have any questions or feedback, feel free to <a href="mailto:j8gho569@gmail.com">email us</a>.</p>
+    </section>
+    
+    <section id="end">
+    </section>
+
+    <section id="end">
+    </section>
+
+    <section id="end">
+    </section>
+    <footer>
+        <p>&copy; 2024 Error OS project, KCR and the J8gho group. All rights reserved.</p>
+    </footer>
 </body>
 </html>
