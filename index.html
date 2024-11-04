@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img\favicon.ico" type="image/x-icon"> <!-- Correct placement -->
+    <title>KCR</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0; 
+            top: 0; 
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.4); 
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: white; 
+            margin: 5% auto; 
+            padding: 20px; 
+            border: 1px solid #888; 
+            width: 80%;
+        }
+        footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+        .search-container {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <i>Kenzobasar.github.io - KCR</i>
+	<div style="background-color: #0283BE; padding: 10px; color: white; text-align: center;">
+        <marquee>New products are: OSbbin 0.12_01, OSbbin 0.12_02, Kenzobasar.github.io</marquee>
+	</div>
+	<img src="img\head.jpg" alt="A beautiful scenery">
+    <strong>New web page!</strong>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search..." oninput="highlightText()">
+    </div>
+
+    <div style="background-color: #ffcc00; padding: 10px; color: black; text-align: center;">
+        <button onclick="toggleDownloads()">Downloads</button>
+        <button onclick="openContact()">Contact</button>
+        <button onclick="toggleFAQs()">FAQs</button>
+    </div>
+
+    <div style="border-left: 4px solid #007BFF; padding: 10px; margin: 10px 0;">
+        <p>"The best way to predict the future is to invent it."</p>
+        <p style="text-align: right; font-weight: bold;"> — Alan Kay</p>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span style="color: #aaa; float: right; font-size: 28px; font-weight: bold;" onclick="closeModal()">&times;</span>
+            <h1>Contact US</h1>
+            <p>We are available at kanubello0000@gmail.com</p>
+        </div>
+    </div>
+
+    <div style="display: flex; justify-content: space-around; padding: 10px;">
+        <a href="#" style="background-color: #e1306c; color: white; padding: 10px; border-radius: 5px;">Youtube</a>
+    </div>
+
+    <div style="border: 2px solid #4caf50; padding: 15px; border-radius: 5px; margin: 10px 0;">
+        <h3 style="margin: 0;">Quote of the Day</h3>
+        <p id="quoteText">"The only limit to our realization of tomorrow is our doubts of today."</p>
+        <button onclick="changeQuote()" style="background-color: #4caf50; color: white; border: none; padding: 10px; cursor: pointer;">New Quote</button>
+    </div>
+
+    <marquee behavior="scroll" direction="left" scrollamount="30">
+        <img src="img\image.jpg" alt="A beautiful scenery">
+        <figcaption>OSbbin 0.12_02</figcaption>
+    </marquee>
+
+    <section id="faqs" style="display:none;">
+        <div style="border: 1px solid #ddd; border-radius: 5px; padding: 20px;">
+            <h3>FAQs</h3>
+            <h4>Question 1 - What was your first learned programming language?</h4>
+            <p>Answer - Python.</p>
+            <h4>Question 2 - What was your dream?</h4>
+            <p>Answer - One day I would be a programmer.</p>
+        </div>
+    </section>
+
+    <section id="download" style="display:none;">
+        <div style="border: 1px solid #ddd; border-radius: 5px; padding: 20px;">
+            <h3>Downloads</h3>
+            <h4>OSbbin</h4>
+            <a href="https://github.com/KENZOBASAR/OSbbin" target="_blank" class=".btn">Download OSbbin</a>
+            <h4>Error OS</h4>
+            <a href="https://github.com/KENZOBASAR/Error-OS" target="_blank" class=".btn">Download Error-OS</a>
+            <h4>LKT</h4>
+            <a href="https://github.com/KENZOBASAR/LKT" target="_blank" class=".btn">Download LKT</a>
+        </div>
+    </section>
+
+    <script>
+        const quotes = [
+            "The best way to predict the future is to create it.",
+            "Life is 10% what happens to us and 90% how we react to it.",
+            "Your time is limited, so don’t waste it living someone else’s life.",
+            "The only way to do great work is to love what you do."
+        ];
+
+        function changeQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quoteText').innerText = quotes[randomIndex];
+        }
+
+        function toggleDownloads() {
+            const downloadsSection = document.getElementById('download');
+            downloadsSection.style.display = downloadsSection.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function openContact() {
+            document.getElementById('myModal').style.display = 'block';
+        }
+
+        function toggleFAQs() {
+            const faqsSection = document.getElementById('faqs');
+            faqsSection.style.display = faqsSection.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+
+        // Highlight text function
+        function highlightText() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const quoteText = document.getElementById('quoteText');
+            const paragraphs = document.querySelectorAll('h4, p');
+
+            // Clear previous highlights
+            paragraphs.forEach(p => {
+                p.innerHTML = p.textContent; // Reset to plain text
+            });
+
+            if (filter) {
+                paragraphs.forEach(p => {
+                    const regex = new RegExp(`(${filter})`, 'gi');
+                    p.innerHTML = p.innerHTML.replace(regex, '<span class="highlight">$1</span>');
+                });
+            }
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('myModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2024 KCR group. All rights reserved.</p>
+        </p>
+    </footer>
+</body>
+</html>
