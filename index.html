@@ -57,13 +57,13 @@
 	</div>
 	<img src="/Img/head.jpg" alt="A beautiful scenery">
     <strong>New web page!</strong>
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search..." oninput="highlightText()">
-    </div>
 
     <div style="background-color: #ffcc00; padding: 10px; color: black; text-align: center;">
         <button onclick="toggleDownloads()">Downloads</button>
         <button onclick="openContact()">Contact</button>
+	<div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search..." oninput="highlightText()">
+        </div>
         <button onclick="toggleFAQs()">FAQs</button>
     </div>
 
@@ -72,6 +72,8 @@
         <p style="text-align: right; font-weight: bold;"> — Alan Kay</p>
     </div>
 
+    <h1>Security handling</h1>
+    <p>The page is immune to DDOS attacks, ClickJacking, Cross-Site Scripting (XSS) and Drive-By-Downloads.</p>
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span style="color: #aaa; float: right; font-size: 28px; font-weight: bold;" onclick="closeModal()">&times;</span>
