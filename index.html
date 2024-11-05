@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
     <link rel="icon" href="/Img/favicon.ico" type="image/x-icon"> <!-- Correct placement -->
     <title>KCR</title>
     <style>
@@ -116,6 +119,18 @@
     </section>
 
     <script>
+    let lastActionTime = 0;
+    const actionDelay = 1000; // 1 second delay
+
+    document.addEventListener('click', function(event) {
+        const currentTime = new Date().getTime();
+        if (currentTime - lastActionTime < actionDelay) {
+            event.preventDefault();
+            alert("Please wait a moment before clicking again.");
+        } else {
+            lastActionTime = currentTime;
+        }
+    });
         const quotes = [
             "The best way to predict the future is to create it.",
             "Life is 10% what happens to us and 90% how we react to it.",
