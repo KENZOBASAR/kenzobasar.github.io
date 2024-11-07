@@ -71,60 +71,6 @@
         <p>"The best way to predict the future is to invent it."</p>
         <p style="text-align: right; font-weight: bold;"> — Alan Kay</p>
     </div>
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-  import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
-
-  // Firebase Configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyDRCkCa708x1jrFGep7MwuPd43EVjZLKz8",
-    authDomain: "kcr-website-62a9f.firebaseapp.com",
-    projectId: "kcr-website-62a9f",
-    storageBucket: "kcr-website-62a9f.firebasestorage.app",
-    messagingSenderId: "112571512537",
-    appId: "1:112571512537:web:eeb304a5648a799b58f0c8",
-    measurementId: "G-DVBKYWBLRW"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
-  // Function to get all comments from Firestore
-  async function getComments() {
-    const commentsCol = collection(db, 'comments');
-    const commentsSnapshot = await getDocs(commentsCol);
-    const commentsList = commentsSnapshot.docs.map(doc => doc.data());
-    
-    // Render comments (for example, append to a div)
-    const commentsDiv = document.getElementById('comments-list');
-    commentsList.forEach(comment => {
-      const commentDiv = document.createElement('div');
-      commentDiv.textContent = `${comment.username}: ${comment.comment}`;
-      commentsDiv.appendChild(commentDiv);
-    });
-  }
-
-  // Call this to fetch and display comments
-  getComments();
-
-  // Function to add a comment to Firestore
-  async function addComment(username, commentText) {
-    try {
-      const docRef = await addDoc(collection(db, "comments"), {
-        username: username,
-        comment: commentText,
-        timestamp: new Date()
-      });
-      console.log("Comment added with ID: ", docRef.id);
-      // Refresh the comment list after adding a new comment
-      getComments();
-    } catch (e) {
-      console.error("Error adding comment: ", e);
-    }
-  }
-</script>
-
     <h1>Security handling</h1>
     <p>The page is immune to DDOS attacks, ClickJacking, Cross-Site Scripting (XSS) and Drive-By-Downloads.</p>
     <div id="myModal" class="modal">
@@ -185,21 +131,6 @@
             lastActionTime = currentTime;
         }
     });
-  // Handle form submission
-  const form = document.getElementById('comment-form');
-  form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent page reload on form submit
-
-    // Get form values
-    const username = document.getElementById('username').value;
-    const commentText = document.getElementById('comment-text').value;
-
-    // Call the addComment function
-    addComment(username, commentText);
-
-    // Reset the form
-    form.reset();
-  });
         const quotes = [
             "The best way to predict the future is to create it.",
             "Life is 10% what happens to us and 90% how we react to it.",
@@ -275,12 +206,6 @@
         <p>&copy; 2024 KCR group. All rights reserved.</p>
         </p>
     </footer>
-<form id="comment-form">
-  <input type="text" id="username" placeholder="Your name" required />
-  <textarea id="comment-text" placeholder="Your comment" required></textarea>
-  <button type="submit">Submit</button>
-</form>
-
 <div id="comments-list"></div> <!-- Where comments will be displayed -->
 
 </body>
