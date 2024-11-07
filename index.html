@@ -55,15 +55,16 @@
 	<div style="background-color: #0283BE; padding: 10px; color: white; text-align: center;">
         <marquee>New products are: OSbbin 0.12_01, OSbbin 0.12_02, Kenzobasar.github.io</marquee>
 	</div>
-	<img src="/Img/head.jpg" alt="A beautiful scenery">
+    <img src="/Img/head.jpg" alt="A beautiful scenery" style="width: 100%; height: auto;">
     <strong>New web page!</strong>
 
-    <div style="background-color: #ffcc00; padding: 10px; color: black; text-align: center;">
-        <button onclick="toggleDownloads()">Downloads</button>
-        <button onclick="openContact()">Contact</button>
-	<div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search..." oninput="highlightText()">
-        </div>
+<div style="background-color: #ffcc00; padding: 10px; color: black; text-align: center; display: flex; justify-content: center; align-items: center;">
+    <button onclick="toggleDownloads()" style="margin-right: 15px;">Downloads</button>
+    <button onclick="openContact()" style="margin-right: 15px;">Contact</button>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search..." oninput="highlightText()" style="padding: 5px; font-size: 16px;">
+    </div>
         <button onclick="toggleFAQs()">FAQs</button>
     </div>
 
@@ -80,6 +81,14 @@
             <p>We are available at kanubello0000@gmail.com</p>
         </div>
     </div>
+
+	<div style="background-color: #0283BE; padding: 10px; color: white; text-align: center;">
+	    <h1>News</h1>
+	</div>
+	<h2>Security feature, Kcaptcha For command line is in development</h2>
+	<p>KCaptcha is a command line security feature to capture bots.</p>
+	<p>-Kenzo Basar</p>
+	
 
     <div style="display: flex; justify-content: space-around; padding: 10px;">
         <a href="#" style="background-color: #e1306c; color: white; padding: 10px; border-radius: 5px;">Youtube</a>
@@ -106,6 +115,10 @@
         </div>
     </section>
 
+    <section id="home">
+        <h1>Home</h1>
+    </section>
+	
     <section id="download" style="display:none;">
         <div style="border: 1px solid #ddd; border-radius: 5px; padding: 20px;">
             <h3>Downloads</h3>
