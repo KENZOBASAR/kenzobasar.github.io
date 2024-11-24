@@ -6,6 +6,7 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <link rel="icon" href="/Img/favicon.ico" type="image/x-icon"> <!-- Correct placement -->
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.18.0/auth0-spa-js.production.js"></script>
     <title>KCR</title>
     <style>
         /* Basic styling */
@@ -58,6 +59,80 @@
     <img src="/Img/head.jpg" alt="A beautiful scenery" style="width: 100%; height: auto;">
     <strong>New web page!</strong>
 
+	  <!-- User Info -->
+  <div id="user-info" style="display: none;">
+    <h2>User Information:</h2>
+    <p id="user-name"></p>
+    <img id="user-picture" alt="User Picture" />
+  </div>
+
+  <!-- Message for signed up user -->
+  <div id="signed-up-message" style="display: none;">
+    <h1>Signed up as <span id="signed-up-username"></span></h1>
+  </div>
+
+  <script>
+    let auth0 = null;
+    let signUped = false;  // Boolean variable to track if the user is signed up
+
+    // Initialize Auth0 client
+    async function initializeAuth0() {
+      // Create Auth0 client
+      auth0 = await createAuth0Client({
+        domain: 'YOUR_AUTH0_DOMAIN',  // Replace with your Auth0 domain
+        client_id: 'YOUR_AUTH0_CLIENT_ID',  // Replace with your Auth0 client ID
+        redirect_uri: window.location.href  // Ensure it matches the redirect URI in Auth0 settings
+      });
+
+      // Check if the user is authenticated
+      const isAuthenticated = await auth0.isAuthenticated();
+
+      if (isAuthenticated) {
+        // User is logged in, set signUped to true
+        signUped = true;
+
+        // Fetch user information
+        const user = await auth0.getUser();
+        document.getElementById('user-name').textContent = `Hello, ${user.name}`;
+        document.getElementById('user-picture').src = user.picture || 'https://via.placeholder.com/100';  // Default image if none provided
+        document.getElementById('user-info').style.display = 'block';
+        document.getElementById('login-btn').style.display = 'none';
+        document.getElementById('logout-btn').style.display = 'block';
+        
+        // Display signed-up message
+        document.getElementById('signed-up-message').style.display = 'block';
+        document.getElementById('signed-up-username').textContent = user.name;  // Display the user's name
+
+        // Log the signUped boolean to the console (for testing purposes)
+        console.log('User is signed up:', signUped);
+      } else {
+        // User is not logged in, show the login button
+        signUped = false;
+        document.getElementById('login-btn').style.display = 'block';
+        document.getElementById('logout-btn').style.display = 'none';
+        document.getElementById('signed-up-message').style.display = 'none';  // Hide the signed-up message
+
+        // Log the signUped boolean to the console (for testing purposes)
+        console.log('User is signed up:', signUped);
+      }
+    }
+
+    // Login function
+    async function login() {
+      await auth0.loginWithRedirect();  // Redirect to Auth0 login page
+    }
+
+    // Logout function
+    function logout() {
+      auth0.logout({
+        returnTo: window.location.origin  // Redirect to home page after logout
+      });
+    }
+
+    // Initialize Auth0 when the page loads
+    window.onload = initializeAuth0;
+  </script>
+	
 <div style="background-color: #ffcc00; padding: 10px; color: black; text-align: center; display: flex; justify-content: center; align-items: center;">
     <button onclick="toggleDownloads()" style="margin-right: 15px;">Downloads</button>
     <button onclick="openContact()" style="margin-right: 15px;">Contact</button>
