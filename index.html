@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
+<FilesMatch "chatbot.html">
+    Header set X-Frame-Options "ALLOW-FROM iqh-network.github.io"
+</FilesMatch>
+<FilesMatch "\.js$">
+    Header unset X-Content-Type-Options
+</FilesMatch>
     <link rel="icon" href="/Img/favicon.ico" type="image/x-icon"> <!-- Correct placement -->
     <script src="https://cdn.auth0.com/js/auth0-spa-js/1.18.0/auth0-spa-js.production.js"></script>
     <title>KCR</title>
