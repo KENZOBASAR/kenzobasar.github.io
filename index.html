@@ -154,6 +154,45 @@
     window.onload = initializeAuth0;
   </script>
 
+  <div class="container">
+    <h1>Please Verify</h1>
+    <p>Complete the reCAPTCHA to proceed with your work.</p>
+
+    <div class="recaptcha-container">
+      <div class="g-recaptcha" data-sitekey="6LcA7Y8qAAAAAJ09h2YK2scvtp-0XME6QExzPoBV" data-callback="recaptchaCallback"></div>
+    </div>
+
+    <button id="submitBtn" disabled>Submit</button>
+  </div>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    var submitBtn = document.getElementById('submitBtn');
+    
+    // Enable the submit button after reCAPTCHA is completed
+    function recaptchaCallback() {
+      submitBtn.disabled = false;
+    }
+
+// Handle submit button click
+submitBtn.addEventListener('click', function() {
+  var recaptchaResponse = grecaptcha.getResponse();
+
+  if (recaptchaResponse.length === 0) {
+    alert("Please complete the reCAPTCHA.");
+  } else {
+    // Proceed to display the main page
+    const container = document.querySelector('.container');
+    container.style.display = 'none'; // Hide the container with reCAPTCHA
+    
+    // Optionally unhide any elements or sections you want to display as the main page
+    document.body.style.backgroundColor = "#f9f9f9"; // Example styling change for the main page
+    alert("You have successfully completed the reCAPTCHA! Main page is now visible.");
+  }
+});
+
+    });
+  </script>
 <div style="background-color: #ffcc00; padding: 10px; color: black; text-align: center; display: flex; justify-content: center; align-items: center;">
     <button onclick="toggleDownloads()" style="margin-right: 15px;">Downloads</button>
     <button onclick="openContact()" style="margin-right: 15px;">Contact</button>
