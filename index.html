@@ -248,17 +248,11 @@
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script>
   var submitBtn = document.getElementById('submitBtn');
-  var captchaModal = document.getElementById('captchaModal');
+  var captchaModal = document.getElementById('captchaModal');,
 
   // Callback function for reCAPTCHA
   function recaptchaCallback() {
     submitBtn.disabled = false; // Enable the submit button
-  }
-
-  // Function to close the modal
-  function closeModal(modalId) {
-    var modal = document.getElementById(modalId);
-    if (modal) modal.style.display = 'none';
   }
 
   // Handle submit button click
@@ -269,7 +263,7 @@
       alert("Please complete the reCAPTCHA.");
     } else {
       // Successfully verified, proceed with actions
-      closeModal('captchaModal');
+      closeModal1('captchaModal');
       alert("Verification successful! Proceeding to the main page.");
 
       // Example: You can display your main content here
