@@ -1,4 +1,3 @@
-Fix the recaptcha that workarea I HATE IT. So instead of Workarea a modal unskippable will appear and if the captcha is completed, the main page will show and be interactable, If modal is opened, the main page will not show and be uninteractable and also i am talking about the main area that everything is
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -155,44 +154,6 @@ Fix the recaptcha that workarea I HATE IT. So instead of Workarea a modal unskip
     window.onload = initializeAuth0;
   </script>
 
-  <div class="container">
-    <h1>Please Verify</h1>
-    <p>Complete the reCAPTCHA to proceed with your work.</p>
-
-    <div class="recaptcha-container">
-      <div class="g-recaptcha" data-sitekey="6LcA7Y8qAAAAAJ09h2YK2scvtp-0XME6QExzPoBV" data-callback="recaptchaCallback"></div>
-    </div>
-
-    <button id="submitBtn" disabled>Submit</button>
-  </div>
-
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <script>
-    var submitBtn = document.getElementById('submitBtn');
-    
-    // Enable the submit button after reCAPTCHA is completed
-    function recaptchaCallback() {
-      submitBtn.disabled = false;
-    }
-
-    // Handle submit button click
-    submitBtn.addEventListener('click', function() {
-      var recaptchaResponse = grecaptcha.getResponse();
-
-      if (recaptchaResponse.length === 0) {
-        alert("Please complete the reCAPTCHA.");
-      } else {
-        // Proceed to the work area
-        document.body.innerHTML += `
-          <div id="workArea">
-            <h2>Welcome! You can now do your work.</h2>
-            <textarea placeholder="Start your work here..."></textarea>
-          </div>
-        `;
-        submitBtn.style.display = 'none';
-      }
-    });
-  </script>
 <div style="background-color: #ffcc00; padding: 10px; color: black; text-align: center; display: flex; justify-content: center; align-items: center;">
     <button onclick="toggleDownloads()" style="margin-right: 15px;">Downloads</button>
     <button onclick="openContact()" style="margin-right: 15px;">Contact</button>
